@@ -1,0 +1,185 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+
+<title></title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<style>
+A:link {
+	TEXT-DECORATION: none
+}
+.105V {
+FONT-SIZE: 10.5pt
+}
+.90V {
+FONT-SIZE: 12pt
+}
+.90VE {
+FONT-SIZE: 7pt;
+}
+A:hover {
+	COLOR: #333333}
+A.bb {
+	TEXT-DECORATION: underline       
+}
+A.bbr {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+
+.style1 {font-size: 18px}
+</style>
+
+<script lanuage="JScript">
+function setdefault()
+{
+	left_form.menuid.value=1;
+}
+function onClickButton(i,table_id,img_left,img_right,main_title)
+{
+	//window.alert(menuid.value);
+	if(left_form.menuid.value!=999)
+	{
+		var tb_id="tb"+left_form.menuid.value;
+		var imgl="img"+left_form.menuid.value+"1";
+		var imgr="img"+left_form.menuid.value+"2";
+		//window.alert(tb_id);
+		//document.all[tb_id].background="background.gif";
+		//document.all[imgl].src="buttonleft.gif";
+		//document.all[imgr].src="buttonright.gif";	
+		var collection;
+
+		collection=document.getElementById(tb_id);
+		collection.style.background="url(background.gif)";
+
+		collection=document.getElementById(imgl);
+		collection.src="buttonleft.gif";
+
+		collection=document.getElementById(imgr);
+		collection.src="buttonright.gif";	
+	}	
+	
+	//table_id.background="backgrdrvs.gif";
+	table_id.style.background="url(backgrdrvs.gif)";
+	img_left.src="btlftrvs.gif";
+	img_right.src="btrightrvs.gif";
+	left_form.menuid.value=i;
+	//parent.document.title=main_title;
+		
+}
+</script>
+</head>
+
+<body onLoad="setdefault();" alink="#000066" bgcolor="#F7F7F7" leftmargin="0" link="#000066" text="#000000" topmargin="0" vlink="#000066" marginheight="0" marginwidth="0" background="top-bg.gif">
+<table width="100" border="0">
+<form name="left_form">
+<input type="hidden" name="menuid" value="999">
+</form>
+  <tr>
+    <td width="29">&nbsp;</td>
+    <td width="61"><span class="menu_system">&nbsp; &nbsp;</span></td>
+  </tr>
+</table>
+<table height="330">
+<tr>
+<td align="center" width="130" valign="top" height="600"  class="top_screen_bar">
+<table>
+  <tr>
+	  <td height="3"></td>
+  </tr>
+</table>
+<table id="tb1" width="125" border="0" cellpadding="0" cellspacing="0" background="backgrdrvs.gif">
+            <tr>
+              <td width="10" align="left"><img id="img11" src="btlftrvs.gif" width="7" height="20"></td>
+              <td align="center" width="105"><a onMouseUp="onClickButton(1,tb1,img11,img12,'Status');" href="/cgi-bin/basecgi" target="mainFrame"><span class="button_string">基本信息</span></a></td>
+              <td width="10" align="right"><img id="img12" src="btrightrvs.gif" width="7" height="20"></td>
+            </tr>
+</table>
+
+<table>
+  <tr>
+	  <td height="1"></td>
+  </tr>
+</table>
+<table id="tb2" width="125"  border="0" cellpadding="0" cellspacing="0" background="background.gif">
+            <tr>
+              <td width="10" align="left"><img id="img21" src="buttonleft.gif" width="7" height="20"></td>
+              <td align="center" width="125" class="button_string"><a onMouseUp="onClickButton(2,tb2,img21,img22,'WAN Setup');" href="/cgi-bin/netcgi" target="mainFrame">网络设置</a></td>
+              <td width="10" align="right"><img id="img22" src="buttonright.gif" width="7" height="20"></td>
+            </tr>
+</table>
+<table>
+  <tr>
+	  <td height="1"></td>
+  </tr>
+</table>
+<table id="tb3" width="125" border="0" cellpadding="0" cellspacing="0" background="background.gif">
+            <tr>
+              <td width="10" align="left"><img id="img31" src="buttonleft.gif" width="7" height="20"></td>
+              <td align="center" width="125" class="button_string"><a onMouseUp="onClickButton(3,tb3,img31,img32,'LAN Setup');" href="/cgi-bin/appcgi" target="mainFrame">应用设置</a></td>
+              <td width="10" align="right"><img id="img32" src="buttonright.gif" width="7" height="20"></td>
+            </tr>
+</table>
+<table>
+  <tr>
+	  <td height="1"></td>
+  </tr>
+</table>
+
+	<table id="tb9" width="125" border="0" cellpadding="0" cellspacing="0" background="background.gif">
+            <tr>
+              <td width="10" align="left"><img id="img91" src="buttonleft.gif" width="7" height="20"></td>
+              <td align="center" width="125" class="button_string"><a onMouseUp="onClickButton(9,tb9,img91,img92,'Routing');" href="/cgi-bin/devcgi" target="mainFrame">终端设置</a></td>
+              <td width="10" align="right"><img id="img92" src="buttonright.gif" width="7" height="20"></td>
+            </tr>
+</table>
+<table>
+  <tr>
+	  <td height="1"></td>
+  </tr>
+</table>
+
+	<table id="tb4" width="125" border="0" cellpadding="0" cellspacing="0" background="background.gif">
+            <tr>
+              <td width="10" align="left"><img id="img41" src="buttonleft.gif" width="7" height="20"></td>
+              <td align="center" width="125" class="button_string"><a onMouseUp="onClickButton(4,tb4,img41,img42,'Routing');" href="/cgi-bin/uploadcgi" target="mainFrame">升级</a></td>
+              <td width="10" align="right"><img id="img42" src="buttonright.gif" width="7" height="20"></td>
+            </tr>
+</table>
+<!--table>
+  <tr>
+	  <td height="1"></td>
+  </tr>
+</table>
+	<table id="tb5" width="125" border="0" cellpadding="0" cellspacing="0" background="background.gif">
+            <tr>
+              <td width="10" align="left"><img id="img51" src="buttonleft.gif" width="7" height="20"></td>
+              <td width="125" class="button_string"><a onMouseUp="onClickButton(5,tb5,img51,img52,'Virtual Server');" href="FrameNAT.htm" target="mainFrame">NAT</a></td>
+              <td width="10" align="right"><img id="img52" src="buttonright.gif" width="7" height="20"></td>
+            </tr>
+</table-->
+
+
+<!--table>
+  <tr>
+	  <td height="1"></td>
+  </tr>
+</table>
+		<table id="tb11" width="125" border="0" cellpadding="0" cellspacing="0" background="background.gif">
+            <tr>
+              <td width="10" align="left"><img id="img111" src="buttonleft.gif" width="7" height="20"></td>
+              <td width="125" class="button_string"><a onMouseUp="onClickButton(11,tb11,img111,img112,'MANAGE');" href="FrameManage.htm" target="mainFrame">家长管理</a></td>
+              <td width="10" align="right"><img id="img112" src="buttonright.gif" width="7" height="20"></td>
+            </tr>
+</table-->
+	<div align="center">
+</div>
+</td>
+</tr></table>
+</body>
+
+
+</html>
+

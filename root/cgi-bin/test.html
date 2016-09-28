@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>这是一个测试网页</title>
+</head>
+<body>
+<form action="/change/" method="post">
+        <input type="hidden" name="auth_code" value= {{ value }} />
+        <ul>
+        <div>
+            <span style="color:red"><b>*</b>用户名:</span>
+            %s<input style="position:absolute;left:130px;" type="hidden" name="userName" value=""/>
+        </div>
+        <div>
+            <span style="color:red"><b>*</b>密码</span>
+            <input style="position:absolute;left:130px;" type="password" name="newPassword1" id="pwd1"/>
+            <b id="div_pwd1"></b>
+        </div>
+        <div>
+            <span style="color:red"><b>*</b>确认密码</span>
+            <input style="position:absolute;left:130px;" type="password" name="newPassword2" id="pwd2"/>
+            <b id="div_pwd2"></b> 
+        </div>
+        <span>&nbsp;</span>
+        <div>
+            <input type="submit" id="submit" value="提交" name="editBtn"/>
+        </div>
+    </ul>
+    </form>
+</body>
+</html>
+
